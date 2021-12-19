@@ -26,3 +26,9 @@ MANIFEST
 
 # Environments
 .env
+
+# Configuration
+config
+
+# Testing
+test.py
