@@ -29,3 +29,6 @@ MANIFEST
 
 # Configuration
 config
+
+# Testing
+test.py
