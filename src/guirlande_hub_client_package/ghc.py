@@ -38,7 +38,7 @@ class Module:
     """Disconnects the module websocket from the backend"""
     self.socket.disconnect()
   
-  def listening(self, event_name, raw_event_name=bool):
+  def listening(self, event_name):
     """Listening on a websocket event.
     
     This method is a decorator. Usage example :
@@ -51,7 +51,7 @@ class Module:
     ```
     """
     def inner(fc):
-      self.socket.on(('module.' + str(self.type) + '.' + event_name) if not raw_event_name else event_name, fc)
+      self.socket.on('module.' + str(self.type) + '.' + event_name, fc)
       return fc
     return inner
 
